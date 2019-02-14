@@ -1,16 +1,7 @@
-import phraseStructures
 import random
+import phraseStructures
 
 def init():
-    string = [f"{phraseStructures.greeting()}",
-    f"",
-    f"",
-    f"",
-    f"",
-    f"",
-    f"",
-    f"",
-    f"",
-    f"",
+    string = [f"{phraseStructures.greeting()}"
     ]
     return random.choice(string)

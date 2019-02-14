@@ -1,0 +1,1 @@
+f{dictionary.goodWord1()} {TOD()} to {dictionary.count()} of my {dictionary.people1()}{punc.std()}

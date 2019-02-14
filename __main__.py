@@ -3,6 +3,7 @@ import sched, time
 import datetime
 from time import gmtime, strftime, sleep
 import tweepy
+import math
 
 import generate
 
@@ -10,7 +11,7 @@ schedule = sched.scheduler(time.time, time.sleep)
 
 # j is time in seconds
 # 900s == 15 mins
-j = 3600
+j = 15
 sec = j
 
 def phrase_start():

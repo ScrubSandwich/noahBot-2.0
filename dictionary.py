@@ -18,7 +18,7 @@ def adj1():
 
 def welcome():
     string = [f"Hello",
-    f"{goodWord1()} {TOD() to {count()}}",
+    f"{goodWord1()} {TOD()} to {count()}",
     f"A {goodWord2()} {TOD()} to {count()}",
     f"Hello",
     ]
@@ -43,7 +43,7 @@ def goodWord2():
     ]
     return random.choice(string)
 
-def TOD:
+def TOD():
     string = [f"morning",
     f"evening",
     f"morrow",
@@ -61,11 +61,33 @@ def TOD:
     ]
     return random.choice(string)
 
-def count:
+def count():
     string = [f"all",
     f"some",
     f"most",
     f"a good chunk",
-    f"{functions.number()}-percent",
+    f"{functions.genNumber()}-percent",
     f""
+    ]
+
+def people1():
+    string = [f"friends",
+    f"followers",
+    f"royal subjects",
+    f"pals",
+    f"peasants",
+    f"citizens",
+    f"hoodlums",
+    f"buddies",
+    f"friennz",
+    f"frenz",
+    f"brothers",
+    f"sisters"
+    f"brothers and sisters",
+    f"family members",
+    f"commune members",
+    f"twitter users",
+    f"Twitter users",
+    f"corporate slaves",
+    f"people"
     ]
