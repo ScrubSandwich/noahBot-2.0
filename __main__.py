@@ -5,6 +5,7 @@ from time import gmtime, strftime, sleep
 import tweepy
 import math
 import generate
+import functions
 
 print("---running noahBot_2.0---")
 
@@ -47,8 +48,12 @@ def main(sc):
 
     for line in f:
         try:
-            api.update_status(line)
-            print("\"" + line + "\" tweeted at " + datetimeStr)
+            if functions.genImg() == False:
+                api.update_status(line)
+                print("\"" + line + "\" tweeted at " + datetimeStr)
+            else:
+                api.update_status_with_media('img/cat_meme1.jpg',"Haha Look At This Funny Picture!")
+                print("\"" + "img/cat_meme1.jpg" + "\" tweeted at " + datetimeStr)
         except tweepy.error.TweepError:
             print("Error: tweet not posted...")
             print("Was there a duplicate tweet?")

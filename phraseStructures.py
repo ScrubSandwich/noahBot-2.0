@@ -3,6 +3,7 @@ import dictionary
 import punct
 import randExtensions
 import scrapeWeather
+import links
 
 def greeting():
     string = [
@@ -15,8 +16,8 @@ def greeting():
 def misc1():
     string = [
     f"{randExtensions.heyFreq1()}wats nine plus ten{randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
-    f"does any {randExtensions.oneWS()} want {randExtensions.twoWS()} {randExtensions.hangWS()} out{randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}"
-    f"{links.nw()}"
+    f"does any {randExtensions.oneWS()} want {randExtensions.twoWS()} {randExtensions.hangWS()} out{randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
+    f"{links.nw()}",
     f"{randExtensions.heyFreq1()}"
     ]
     return random.choice(string)

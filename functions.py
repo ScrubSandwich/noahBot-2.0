@@ -1,6 +1,13 @@
 import math
 import random
 
+#probability of tweeting a picture
+def genImg():
+    if random.randint(0,10) == 5:
+        return True
+    else:
+        return False
+
 def genNumber():
     textNumber = str(convertNum(random.randint(0, 99)))
     #print(type(textNumber))
