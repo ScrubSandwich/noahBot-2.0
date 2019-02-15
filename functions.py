@@ -2,8 +2,7 @@ import math
 import random
 
 def genNumber():
-    textNumber = ""
-    textNumber = convertNum(random.randint(0, 99))
+    textNumber = str(convertNum(random.randint(0, 99)))
     #print(type(textNumber))
     textNumber = textNumber + getTextNumberL()
     return textNumber

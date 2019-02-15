@@ -38,7 +38,7 @@ def heyFreq1():
     ]
     return random.choice(string)
 
-def emoticonFreq1:
+def emoticonFreq1():
     string = [f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",
     f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",
     f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",
@@ -57,14 +57,14 @@ def emoticonFreq1:
     return random.choice(string)
 
 #word switch
-def oneWS:
+def oneWS():
     string = [f"one",f"1"]
     return random.choice(string)
 
-def twoWS:
+def twoWS():
     string = [f"two", f"2"]
     return random.choice(string)
 
-def hangWS:
+def hangWS():
     string = [f"hang", f"hang", f"hang", f"hang", f"hand"]
     return random.choice(string)

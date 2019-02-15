@@ -15,7 +15,7 @@ def weatherConditionToInt(conditionString):
 		weatherConditionValue = 1
 	if conditionString == "Mostly Cloudy":
 		weatherConditionValue = 1
-    if conditionString == "Fair":
+	if conditionString == "Fair":
 		weatherConditionValue = 1
 	if conditionString == "Light Rain":
 		weatherConditionValue = 2

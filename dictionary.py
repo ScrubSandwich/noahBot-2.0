@@ -21,9 +21,11 @@ def verbBe1():
     return random.choice(string)
 
 def verbHaving1():
-    string: = [f"having",
-
+    string = [f"having",
+    "enjoying",
+    "engaging with"
     ]
+    return random.choice(string)
 
 def adj1():
     string = [f"",
@@ -133,7 +135,7 @@ def people1():
     ]
     return random.choice(string)
 
-def wish1:
+def wish1():
     string = [f"I'm wishing",
     f"I hope",
     f"I hope that",
