@@ -4,8 +4,9 @@ import datetime
 from time import gmtime, strftime, sleep
 import tweepy
 import math
-
 import generate
+
+print("---running noahBot_2.0---")
 
 schedule = sched.scheduler(time.time, time.sleep)
 
@@ -42,11 +43,12 @@ def main(sc):
     cachedTweet.close()
 
     #capture tweet time
-    #datetimeVar = str(datetime.datetime.now())
+    datetimeStr = str(datetime.datetime.now())
 
     for line in f:
         try:
             api.update_status(line)
+            print("\"" + line + "\" tweeted at " + datetimeStr)
         except tweepy.error.TweepError:
             print("Error: tweet not posted...")
             print("Was there a duplicate tweet?")

@@ -1,22 +1,31 @@
-from random import *
-from math import floor
+import math
+import random
 
 def genNumber():
-    textNumber = convertNum(randint(0, 99))
-    textNumber += [f"hundred",
+    textNumber = ""
+    textNumber = convertNum(random.randint(0, 99))
+    #print(type(textNumber))
+    textNumber = textNumber + getTextNumberL()
+    return textNumber
+
+def getTextNumberL():
+    string = [f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",
+    f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",f"",
+    f"hundred",
     f"hundred",
     f"thousand",
-    f"",
-    f"",
-    f"",
-    f""
+    f"billion trillion million",
+    f"gazillion",
+    f"undecillion",
+    f"hundo",
+    f"one-hundredths"
     ]
-    return textNumber
+    return random.choice(string)
 
 def convertNum(randomInt):
     if(randomInt < 20):
         return switchNum
-    else:
+    elif (randomInt >= 20):
         if(randomInt%10 == 2):
             suffix = switchNum(math.floor(randomInt/10))
             return "twenty-" + suffix
@@ -42,7 +51,7 @@ def convertNum(randomInt):
             suffix = switchNum(math.floor(randomInt/10))
             return "ninety-" + suffix
 
-def switchNum(randomInt):
+def switchNum(Integer):
     case = {
         1: "one",
         2: "two",
@@ -64,4 +73,35 @@ def switchNum(randomInt):
         18: "eighteen",
         19: "nineteen"
     }
-    return case.get(randomInt)
+    return case.get(Integer)
+
+#return either word or number
+#ex: "9 + 10" or "nine plus ten"
+def useNumOrWord(Integer):
+    string = [str(Integer),
+    switchNum(Integer)
+    ]
+    return random.choice(string)
+
+#removes degree sign and converts to int
+def trimToInt(temps):
+	x = len(temps)
+	#y = x-1
+	int_temps = int(temps[:x-1])
+	return int_temps
+
+#trims feels like string down to degree sign
+def trim_toDegree(string):
+	if not string:
+		return ""
+
+	ignoreChar = ' '
+	x = 0
+	while x < len(string) and string[x] == ignoreChar:
+		x = x+1
+	y = len(string )-1
+	while y>=0 and string[y] == ignoreChar:
+		y = y-1
+
+	lengthBuffer = len("Feels Like")
+	return string[x+lengthBuffer+1:y+1]

@@ -1,1 +1,1 @@
-f{dictionary.goodWord1()} {TOD()} to {dictionary.count()} of my {dictionary.people1()}{punc.std()}
+Goooooood tea-time to all of my people......!
