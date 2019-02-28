@@ -16,7 +16,7 @@ def greeting():
 def misc1():
     string = [
     f"{randExtensions.heyFreq1()}wats nine plus ten{randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
-    f"does any {randExtensions.oneWS()} want {randExtensions.twoWS()} {randExtensions.hangWS()} out{randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
+    f"does any {randExtensions.oneWS()} want {randExtensions.twoWS()} {randExtensions.doSomething()} {randExtensions.laughFreq1()}{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
     f"{links.nw()}",
     f"{randExtensions.heyFreq1()}"
     ]
@@ -25,3 +25,9 @@ def misc1():
 def weatherPhrase():
     url = 'https://weather.com/weather/today/l/46304:4:US'
     scrapeWeather.init_grab(url)
+
+def nwConcert():
+    string = [
+    f"go {dictionary.buy()} tickets to northwest/bristol empire/fayde concert now https://faydemusic.com/events/{punct.stdFreq1()} {randExtensions.emoticonFreq1()}",
+    ]
+    return random.choice(string)

@@ -65,6 +65,17 @@ def twoWS():
     string = [f"two", f"2"]
     return random.choice(string)
 
-def hangWS():
-    string = [f"hang", f"hang", f"hang", f"hang", f"hand"]
+def withW():
+    string = [f"with", f"with", f"with", f"w", f"w/", f"wit", f"wif"]
+    return random.choice(string)
+
+def plc():
+    string = [f"bank", f"store", f"park", f"fair", f"beach", f"playgrounf", f"grociery store"]
+    return random.choice(string)
+
+def doSomething():
+    string = [f"hang out", f"hang out {withW()} me", f"hand out", f"go to the {plc()}",
+    f"goto the {plc()}", f"go to the {plc()} {withW()} me", f"go crociery shoping",
+    f"go to the {plc()}", f"go to the {plc()} {withW()} me"
+    ]
     return random.choice(string)

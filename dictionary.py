@@ -147,6 +147,15 @@ def wish1():
     ]
     return random.choice(string)
 
+def buy():
+    string = [f"purchase",
+    f"buy",
+    f"cop",
+    f"order",
+    f"invest in"
+    ]
+    return random.choice(string)
+
 #-----------------#
 #weather dictionary:
 

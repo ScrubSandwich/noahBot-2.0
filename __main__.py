@@ -51,9 +51,13 @@ def main(sc):
             if functions.genImg() == False:
                 api.update_status(line)
                 print("\"" + line + "\" tweeted at " + datetimeStr)
-            else:
+            elif functions.genImg() == True:
+                print("load img")
                 api.update_status_with_media('img/cat_meme1.jpg',"Haha Look At This Funny Picture!")
                 print("\"" + "img/cat_meme1.jpg" + "\" tweeted at " + datetimeStr)
+            else:
+                print("functions.genImg() != True or False... Could there be a logic error somewhere?")
+                api.update_status("functions.genImg() != True or False... Could there be a logic error somewhere?")
         except tweepy.error.TweepError:
             print("Error: tweet not posted...")
             print("Was there a duplicate tweet?")

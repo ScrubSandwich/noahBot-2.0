@@ -10,32 +10,32 @@ def phrase_start(temp, feelsTemp, weatherType):
 		if temp >= 60:
 			if temp < 80:
 				phraseOut = pSW.temp60to79(temp)
-		if temp >= 80:
+		elif temp >= 80:
 			if temp < 90:
 				phraseOut = pSW.temp80to89(temp)
-		if temp >= 90:
+		elif temp >= 90:
 			phraseOut = pSW.temp90plus(temp)
 
 	if weatherType == 1:
-        if temp < 1:
-            
-        if temp >= 1:
-            if temp < 21:
-
-        if temp == 21:
-            #weather is 21
-        if temp >= 22:
-            if temp < 30:
-
-        if temp >= 30:
-            if temp < 40:
-
-		if temp >= 60:
+		if temp < 1:
+			phraseOut = "BELOW_1F"
+		elif temp >= 1:
+			if temp < 21:
+				phraseOut = "GREATER_1F, BELOW_21F"
+		elif temp == 21:
+			phraseOut = "WEATHER_IS_21F"
+		elif temp >= 22:
+			if temp < 30:
+				phraseOut = "GREATER_22F, BELOW_30F"
+		elif temp >= 30:
+			if temp < 40:
+				phraseOut = "GREATER_30F, BELOW_40F"
+		elif temp >= 60:
 			if temp < 80:
 				phraseOut = pSW.temp60to79_WC1(temp)
-		if temp >= 80:
+		elif temp >= 80:
 			if temp < 90:
 				phraseOut = pSW.temp80to89_WC1(temp)
-		if temp >= 90:
+		elif temp >= 90:
 			phraseOut = pSW.temp90plus_WC1(temp)
 	return phraseOut
