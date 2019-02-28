@@ -31,10 +31,10 @@ def main(sc):
     cachedTweet.write(phrase_final)
     cachedTweet.close()
 
-    consumer_key = ''
-    consumer_secret  = ''
-    access_key = ''
-    access_secret = ''
+    consumer_key = 'XvlJXaQ6ovTo1gOqh9WVMeU7M'
+    consumer_secret  = 'xg0ckn4YNDF5bPdATQ7Bf9pRZgE0MPoikQoGkndy6LC3H0NszO'
+    access_key = '505149026-oStxD37BQClezeljensQc0rZLcXBykLvc4PUX7TD'
+    access_secret = 'tVYMzZUmGF0atPW4rfLpqT2EgMgL6EpqQG7T2QXuBZsjC'
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
     api = tweepy.API(auth)
@@ -48,13 +48,14 @@ def main(sc):
 
     for line in f:
         try:
-            if functions.genImg() == False:
+            genImgBool = functions.genImg()
+            if genImgBool == False:
                 api.update_status(line)
                 print("\"" + line + "\" tweeted at " + datetimeStr)
-            elif functions.genImg() == True:
+            elif genImgBool == True:
                 print("load img")
-                api.update_status_with_media('img/cat_meme1.jpg',"Haha Look At This Funny Picture!")
-                print("\"" + "img/cat_meme1.jpg" + "\" tweeted at " + datetimeStr)
+                api.update_with_media(f'{functions.selectImg()}', status="Haha Look At This Funny Picture!")
+                print("image tweeted at " + datetimeStr)
             else:
                 print("functions.genImg() != True or False... Could there be a logic error somewhere?")
                 api.update_status("functions.genImg() != True or False... Could there be a logic error somewhere?")

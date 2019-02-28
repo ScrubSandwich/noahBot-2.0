@@ -3,10 +3,18 @@ import random
 
 #probability of tweeting a picture
 def genImg():
-    if random.randint(0,10) == 5:
+    if random.randint(0,10) > 5:
         return True
     else:
         return False
+
+def selectImg():
+    string = [
+    'img/grape.png',
+    'img/cat_meme1.jpg',
+    'img/egg.jpg'
+    ]
+    return random.choice(string)
 
 def genNumber():
     textNumber = str(convertNum(random.randint(0, 99)))
