@@ -62,6 +62,6 @@ def main(sc):
         except tweepy.error.TweepError:
             print("Error: tweet not posted...")
             print("Was there a duplicate tweet?")
-    schedule.enter(sec,1,main,(sc,))
-schedule.enter(sec,1,main,(schedule,))
+    schedule.enter(sec,500,main,(sc,))
+schedule.enter(sec,500,main,(schedule,))
 schedule.run()
